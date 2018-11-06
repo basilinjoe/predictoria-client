@@ -5,8 +5,52 @@
     </mat-toolbar>
   </div>
   <div fxFlex="auto" fxFlex.gt-sm="87">
-    <div class="fab-container">
-      <button mat-fab color="primary">Add</button>
-    </div>
+    <mat-tab-group fxFlexFill>
+      <mat-tab label="Games">
+        <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+          <app-add-result></app-add-result>
+          <!-- <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  New Game
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-new-game></app-new-game>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Add Result
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-add-result></app-add-result>
+            </mat-expansion-panel>
+          </mat-accordion> -->
+        </div>
+      </mat-tab>
+      <mat-tab label="HVP">
+        <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  New HVP
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-new-hvp></app-new-hvp>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Add HVP
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-add-hvp-result></app-add-hvp-result>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>

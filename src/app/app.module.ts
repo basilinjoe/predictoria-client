@@ -33,6 +33,7 @@ import { AddHvpResultComponent } from './dashboard-admin/add-hvp-result/add-hvp-
     PdnMaterialModule,
     FlexLayoutModule
   ],
+  entryComponents: [NewGameComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
