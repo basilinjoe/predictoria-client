@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { PdnMaterialModule } from './pdn-material/pdn-material.module';
 
@@ -31,7 +33,9 @@ import { AddHvpResultComponent } from './dashboard-admin/add-hvp-result/add-hvp-
     AppRoutingModule,
     BrowserAnimationsModule,
     PdnMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   entryComponents: [NewGameComponent],
   providers: [],
