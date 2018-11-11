@@ -5,16 +5,18 @@
       <mat-card-subtitle>Prediction made easy</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <div class="example-form">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Username">
-        </mat-form-field>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="example-form">
+          <mat-form-field class="example-full-width">
+            <input formControlName="userName" matInput placeholder="Username">
+          </mat-form-field>
 
-        <mat-form-field class="example-full-width">
-          <input type="password" matInput placeholder="Password">
-        </mat-form-field>
-        <button type="submit" mat-raised-button color="primary">Login</button>
-      </div>
+          <mat-form-field class="example-full-width">
+            <input formControlName="password" type="password" matInput placeholder="Password">
+          </mat-form-field>
+          <button type="submit" mat-raised-button color="primary">Login</button>
+        </div>
+      </form>
     </mat-card-content>
   </mat-card>
 </div>
