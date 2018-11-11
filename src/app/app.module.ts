@@ -16,6 +16,7 @@ import { NewGameComponent } from './dashboard-admin/new-game/new-game.component'
 import { AddResultComponent } from './dashboard-admin/add-result/add-result.component';
 import { NewHvpComponent } from './dashboard-admin/new-hvp/new-hvp.component';
 import { AddHvpResultComponent } from './dashboard-admin/add-hvp-result/add-hvp-result.component';
+import { ResultComponent } from './dashboard/result/result.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddHvpResultComponent } from './dashboard-admin/add-hvp-result/add-hvp-
     NewGameComponent,
     AddResultComponent,
     NewHvpComponent,
-    AddHvpResultComponent
+    AddHvpResultComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

@@ -24,7 +24,7 @@ const ELEMENT_DATA: Game[] = [
 })
 export class AddResultComponent implements OnInit {
   displayedColumns: string[] = ['position', 'team1', 'team2', 'date', 'result', 'actions'];
-  dataSource:Game[] = ELEMENT_DATA; //TODO remove this line once cors is set
+  dataSource:Game[]; // = ELEMENT_DATA; //TODO remove this line once cors is set
 
   constructor(public dialog: MatDialog, private http: HttpClient) {
     this.getResults();
@@ -45,8 +45,8 @@ export class AddResultComponent implements OnInit {
   }
 
   saveGame(data:Game){
-    const resultGetUrl = 'http://localhost:9091/api/SavePredict';
-    this.http.put<Game>(resultGetUrl,data).subscribe(res=>{
+    const resultGetUrl = 'http://localhost:9091/api/UpatepredictList';
+    this.http.post<Game>(resultGetUrl,data).subscribe(res=>{
       this.getResults();
     });
   }
