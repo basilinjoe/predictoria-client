@@ -17,6 +17,8 @@ import { AddResultComponent } from './dashboard-admin/add-result/add-result.comp
 import { NewHvpComponent } from './dashboard-admin/new-hvp/new-hvp.component';
 import { AddHvpResultComponent } from './dashboard-admin/add-hvp-result/add-hvp-result.component';
 import { ResultComponent } from './dashboard/result/result.component';
+import { PredictionHistoryComponent } from './prediction-history/prediction-history.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ResultComponent } from './dashboard/result/result.component';
     AddResultComponent,
     NewHvpComponent,
     AddHvpResultComponent,
-    ResultComponent
+    ResultComponent,
+    PredictionHistoryComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

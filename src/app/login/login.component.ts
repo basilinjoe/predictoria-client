@@ -26,19 +26,25 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    const resultGetUrl = `http://localhost:9091/api/login`;
-    this.http.post<LoginResponse>(resultGetUrl, this.loginForm.value).subscribe(res=>{
-      if(!res) {
-        this.snackBar.open('Invalid username or password !','Try again',{duration:2000});
-        return;
-      }
-      if(res.isAdmin){
-        this.router.navigate(['dashboardAdmin', res.userName]);
-      }
-      else{
-        this.router.navigate(['dashboard', res.userName]);
-      }
-    });
+    if(this.loginForm.valid){
+      const resultGetUrl = `http://localhost:9091/api/login`;
+      this.http.post<LoginResponse>(resultGetUrl, this.loginForm.value).subscribe(res=>{
+        if(!res) {
+          this.snackBar.open('Invalid username or password !','Try again',{duration:2000});
+          return;
+        }
+        if(res.isAdmin){
+          this.router.navigate(['dashboardAdmin', res.userName]);
+        }
+        else{
+          this.router.navigate(['dashboard', res.userName]);
+        }
+      });
+    }
+  }
+
+  register(){
+    this.router.navigate(['register']);
   }
 
 }
